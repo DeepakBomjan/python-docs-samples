@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy all contracts on UAT environment
-        run: echo "PR Just merged"
+        run: echo "PR Just merged; again confirming"
