@@ -20,7 +20,7 @@ jobs:
       - name: configureawscredentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::234736309150:role/github_connect
+          role-to-assume: arn:aws:iam::*********:role/github_connect
           role-session-name: samplerolesession
           aws-region: us-east-1
       - name: list buckets
