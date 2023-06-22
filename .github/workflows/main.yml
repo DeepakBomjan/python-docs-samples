@@ -23,6 +23,8 @@ jobs:
           role-to-assume: arn:aws:iam::234736309150:role/github_connect
           role-session-name: samplerolesession
           aws-region: us-east-1
-
+      - name: list buckets
+        run: aws s3 ls
+        
       - name: Deploy all contracts on UAT environment
         run: echo "PR Just merged; again confirming"
