@@ -12,6 +12,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+     
+      - name: configureawscredentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::234736309150:role/github_connect
+          role-session-name: samplerolesession
+          aws-region: us-east-1
 
       - name: Deploy all contracts on UAT environment
         run: echo "PR Just merged; again confirming"
