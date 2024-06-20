@@ -1,0 +1,17 @@
+name: Deploy Contracts After PR Merge to main branch
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  deploy-contracts-uat:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy all contracts on UAT environment
+        run: echo "PR Just merged"
